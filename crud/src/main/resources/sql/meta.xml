@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<metadata>
+
+    <module name="module_crm_crud">
+
+        <table name="Student">
+            <columns>
+                <column name="ID" data-type="BIGINT"/>
+                <column name="NAME" data-type="CHAR" nullable="false"/>
+                <column name="ROLLNUMBER" data-type="INTEGER" nullable="false"/>
+                <column name="DEPARTMENT" data-type="CHAR" nullable="false"/>
+            </columns>
+            <primary-key name="Student_PK" column="ID" sequence-generator="Student.ID" />
+        </table>
+        <table name="StudentData">
+            <columns>
+                <column name="ID" data-type="BIGINT"/>
+                <column name="PROVIDER_ID" data-type="BIGINT" nullable="false"/>
+                <column name="EMAIL" data-type="CHAR" nullable="false"/>
+                <column name="ADDRESS" data-type="CHAR" nullable="false"/>
+                <column name="PHONENUMBER" data-type="BIGINT" nullable="false"/>
+            </columns>
+            <primary-key name="StudentData_PK" column="ID" sequence-generator="StudentData.ID" />
+<!--            <foreign-keys>-->
+<!--                <foreign-key name="StudentData_FK" reference-table="Student" local-column="PROVIDER_ID" reference-column="ID" constraint="ON-DELETE-CASCADE" />-->
+<!--            </foreign-keys>-->
+        </table>
+
+    </module>
+
+</metadata>
